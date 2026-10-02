@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <main class="dashboard">
+            <header class="topbar">
+                <div class="brand-mark" aria-hidden="true">T</div>
+                <div>
+                    <p class="eyebrow">BROWSER ACTIVITY</p>
+                    <h1>Time tracker</h1>
+                </div>
+                <span class="live-indicator"><span></span> LIVE</span>
+            </header>
+
+            <section class="summary" aria-label="Usage summary">
+                <article class="metric metric-primary">
+                    <p class="metric-label">Tracked time</p>
+                    <p class="metric-value" id="totalTime">0m</p>
+                    <p class="metric-note">Across all visits</p>
+                </article>
+                <article class="metric">
+                    <p class="metric-label">Focus score</p>
+                    <p class="metric-value" id="score">0%</p>
+                    <p class="metric-note">Work &amp; learning sites</p>
+                </article>
+            </section>
+
+            <section class="sites-section" aria-labelledby="sitesHeading">
+                <div class="section-heading">
+                    <h2 id="sitesHeading">Website usage</h2>
+                    <span id="siteCount">0 SITES</span>
+                </div>
+                <div id="results" class="site-list" aria-live="polite"></div>
+            </section>
+
+            <footer class="footer-note">Your activity is stored on this device.</footer>
+        </main>
+
+        <script src="popup.js"></script>
+    </body>
+</html>

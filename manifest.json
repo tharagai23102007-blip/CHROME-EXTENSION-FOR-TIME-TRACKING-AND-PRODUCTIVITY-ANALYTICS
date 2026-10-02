@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Time track",
+    "version": "1.0",
+    "description": "Track website using and productivity.",
+    "permissions": ["tabs", "storage", "alarms", "windows"],
+    "background":{
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

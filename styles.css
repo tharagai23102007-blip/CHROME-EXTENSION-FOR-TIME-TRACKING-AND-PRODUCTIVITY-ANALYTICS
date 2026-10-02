@@ -1,0 +1,237 @@
+:root {
+    color-scheme: light;
+    font-family: "Segoe UI", sans-serif;
+    font-synthesis: none;
+    --ink: #202a27;
+    --muted: #78817c;
+    --paper: #f5f4ed;
+    --line: #e4e5dc;
+    --green: #23694f;
+    --lime: #d5ed72;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 380px;
+    min-height: 400px;
+    margin: 0;
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image: radial-gradient(#d9ddd1 0.65px, transparent 0.65px);
+    background-size: 13px 13px;
+}
+
+.dashboard {
+    min-height: 400px;
+    padding: 22px 22px 16px;
+    background: linear-gradient(180deg, rgba(245, 244, 237, 0.96), rgba(245, 244, 237, 0.88));
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding-bottom: 20px;
+}
+
+.brand-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    border-radius: 11px;
+    color: var(--lime);
+    background: var(--green);
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.eyebrow,
+.metric-label,
+.metric-note,
+.section-heading h2,
+.section-heading span,
+.footer-note {
+    margin: 0;
+}
+
+.eyebrow {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin: 2px 0 0;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: var(--green);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.live-indicator span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #70a855;
+    box-shadow: 0 0 0 3px rgba(112, 168, 85, 0.15);
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.metric {
+    min-width: 0;
+    min-height: 112px;
+    padding: 15px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.metric-primary {
+    border-color: var(--green);
+    color: #fff;
+    background: var(--green);
+}
+
+.metric-label {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.metric-value {
+    overflow: hidden;
+    margin: 7px 0 3px;
+    font-family: Georgia, serif;
+    font-size: 29px;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.metric-note {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.metric-primary .metric-note {
+    color: #d5e3db;
+}
+
+.sites-section {
+    margin-top: 23px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-heading span {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.site-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.site-row {
+    padding: 12px 1px 2px;
+}
+
+.site-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+}
+
+.site-name {
+    overflow: hidden;
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.site-duration {
+    flex: 0 0 auto;
+    color: var(--muted);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+}
+
+.usage-track {
+    height: 4px;
+    overflow: hidden;
+    border-radius: 4px;
+    background: #e5e7dc;
+}
+
+.usage-bar {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #d17652;
+}
+
+.site-row:nth-child(3n + 1) .usage-bar {
+    background: var(--green);
+}
+
+.site-row:nth-child(3n + 2) .usage-bar {
+    background: #c4a63c;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 24px 8px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.footer-note {
+    margin-top: 16px;
+    padding-top: 11px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 10px;
+    text-align: center;
+}
